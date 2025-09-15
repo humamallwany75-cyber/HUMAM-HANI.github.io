@@ -1,0 +1,42 @@
+ <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>الأخبار - HUMAM HANI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>HUMAM HANI</h1>
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="programs.html">البرامج</a>
+    <a href="updates.html">التحديثات</a>
+    <a href="news.html">الأخبار</a>
+  </nav>
+</header>
+
+<main>
+  <h2>الأخبار</h2>
+  <ul id="news-list"></ul>
+</main>
+
+<footer>
+  <p>© 2025 HUMAM HANI</p>
+</footer>
+
+<script>
+async function loadNews() {
+  const res = await fetch('news.json');
+  const news = await res.json();
+  const list = document.getElementById('news-list');
+  news.forEach(n => {
+    const li = document.createElement('li');
+    li.innerHTML = <strong>${n.date}</strong> - ${n.title}: ${n.desc};
+    list.appendChild(li);
+  });
+}
+loadNews();
+</script>
+</body>
+</html>

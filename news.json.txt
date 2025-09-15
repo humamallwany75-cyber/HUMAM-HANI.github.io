@@ -1,0 +1,12 @@
+[
+  {
+    "name": "برنامج مكافحة الفيروسات",
+    "desc": "نسخة مجانية",
+    "link": "https://drive.google.com/uc?export=download&id=1AbCDeFgHiJKLmnoP"
+  },
+  {
+    "name": "برنامج ضغط الملفات",
+    "desc": "إصدار 2025",
+    "link": "https://drive.google.com/uc?export=download&id=2XyZzPQrsTuVw"
+  }
+]
